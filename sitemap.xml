@@ -3,7 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://techauthor.github.io/posts/markdown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-11-13T13:26:51+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://techauthor.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://techauthor.github.io/posts/</loc>
+    <lastmod>2018-11-13T13:26:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -14,6 +25,7 @@
   
   <url>
     <loc>http://techauthor.github.io/</loc>
+    <lastmod>2018-11-13T13:26:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   
