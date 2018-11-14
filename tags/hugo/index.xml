@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on TechAuthor</title>
+    <link>http://techauthor.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on TechAuthor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://techauthor.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo 安装</title>
+      <link>http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/</guid>
+      <description> Step 1: 安装 Hugo  Homebrew, 是MacOS下的软件包管理器，a package manager for macOS, can be installed from brew.sh. See install if you are running Windows etc.
+ brew install hugo  To verify your new install:
+hugo version  </description>
+    </item>
+    
+  </channel>
+</rss>

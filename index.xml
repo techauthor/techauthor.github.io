@@ -454,6 +454,281 @@ git submodule update --init --recursive
     </item>
     
     <item>
+      <title>Hugo 安装</title>
+      <link>http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/</guid>
+      <description>
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;step-1-安装-hugo&#34;&gt;&lt;strong&gt;Step 1: 安装 Hugo&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Homebrew, 是MacOS下的软件包管理器，a package manager for macOS, can be installed from brew.sh. See install if you are running Windows etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To verify your new install:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MarkDown 常用语法</title>
+      <link>http://techauthor.github.io/post/markdown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>http://techauthor.github.io/post/markdown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</guid>
+      <description>
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;一-标题&#34;&gt;一、标题&lt;/h3&gt;
+
+&lt;p&gt;在想要设置为标题的文字前面加#来表示，
+一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。&lt;/p&gt;
+
+&lt;p&gt;注：标准语法一般在#后跟个空格再写文字。&lt;/p&gt;
+
+&lt;p&gt;语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;二-字体&#34;&gt;二、字体&lt;/h3&gt;
+
+&lt;p&gt;语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;**加粗**
+*斜体*
+***加粗斜体***
+~~我被删除啦~~
+
+注意：标记后不要用空格。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;三-引用&#34;&gt;三、引用&lt;/h3&gt;
+
+&lt;p&gt;在引用的文字前加&amp;gt;即可。引用也可以嵌套，如加两个&amp;gt;&amp;gt;三个&amp;gt;&amp;gt;n个……&lt;/p&gt;
+
+&lt;p&gt;语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt;这是引用的内容
+&amp;gt;&amp;gt;这是引用的内容
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;这是引用的内容
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这是引用的内容&lt;/p&gt;
+
+&lt;p&gt;这是引用的内容&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这是引用的内容&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是引用的内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;四-分割线&#34;&gt;四、分割线&lt;/h3&gt;
+
+&lt;p&gt;三个或三个以上的-、*都可以，效果是一样的。&lt;/p&gt;
+
+&lt;p&gt;语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+----
+***
+****
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;五-图片&#34;&gt;五、图片&lt;/h3&gt;
+
+&lt;p&gt;语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;语法一：
+![图片alt](图片地址 &amp;quot;图片title&amp;quot;)
+
+语法二：
+![图片alt][01]
+[01]: 图片地址 &amp;quot;图片title&amp;quot;
+
+图片title可以不加
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;示例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;语法一：
+![数据库矢量图1](/img/1.png &amp;quot;数据库矢量图2&amp;quot;)
+
+语法二：
+![数据库矢量图1][01]
+[01]:/img/1.png &amp;quot;shiliangtu&amp;quot;
+
+图片路径规则说明：
+第一、在config.toml中配置baseurl。作用是无论在本地还是发布出去，
+图片的路径都是相对于baseurl而言的。
+
+第二、在Markdown图片路径中，以static为根目录写全路径。
+
+假设测试baseurl为http://localhost:1313/，图片位置：/static/img/hugo/123.png，
+那么在Markdown中写作![图片说明](/img/hugo/123.png)。
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;六-超链接&#34;&gt;六、超链接&lt;/h3&gt;
+
+&lt;p&gt;语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;语法一：
+[链接名](链接地址 &amp;quot;链接title&amp;quot;)
+语法二：
+如需在新窗口打开链接，可以使用原生HTML的&amp;lt;a&amp;gt;标签:
+&amp;lt;a href=&amp;quot;链接地址&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;链接名&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;效果：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.baidu.com&#34; title=&#34;百度&#34; target=&#34;_blank&#34;&gt;百度&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.baidu.com&#34; target=&#34;_blank&#34;&gt;百度新窗口打开&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;七-列表&#34;&gt;七、列表&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;无序列表&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+ 内容
+- 内容
+* 内容
+注意：标记后要用空格。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;有序列表&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;数字加小圆点.
+1. 列表一
+2. 列表二
+3. 列表三
+注意：小圆点.后要用空格。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;列表嵌套&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上下级之间敲三个空格即可&lt;/p&gt;
+
+&lt;p&gt;示例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- 上级无序列表   
+   - 下级无序列表一
+   - 下级无序列表二
+   - 下级无序列表三
+
+1. 上级无序列表
+   1. 下级无序列表一
+   2. 下级无序列表二
+   3. 下级无序列表三
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;八-行内标记&#34;&gt;八、行内标记&lt;/h3&gt;
+
+&lt;p&gt;前后两个反引号&lt;/p&gt;
+
+&lt;p&gt;单行语法示例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;标记外内容`hello world`标记外内容
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;多行语法示例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;标记外内容`
+&amp;lt;div&amp;gt;   
+    &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+`标记外内容
+
+效果：最终合并为一行，&amp;lt;div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;九-代码块&#34;&gt;九、代码块&lt;/h3&gt;
+
+&lt;p&gt;语法一：前后三个反引号&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;标记外内容```javascript    //根据不同的语言配置不同的代码着色-可选
+&amp;lt;div&amp;gt;   
+    &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+```标记外内容
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;语法二：空行+Tab&lt;/p&gt;
+
+&lt;p&gt;示例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;我将会出现在代码块中。。。。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A Person Re-Identification System For Mobile Devices</title>
       <link>http://techauthor.github.io/publication/person-re-id/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0800</pubDate>
