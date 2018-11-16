@@ -15,7 +15,7 @@
   
     
   
-  <meta name="description" content="MacOS下安装Hugo">
+  <meta name="description" content="MacOS下创建Hugo站点">
 
   
   <link rel="alternate" hreflang="en-us" href="http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/">
@@ -92,8 +92,8 @@
   
   <meta property="og:site_name" content="TechAuthor">
   <meta property="og:url" content="http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/">
-  <meta property="og:title" content="Hugo 安装 | TechAuthor">
-  <meta property="og:description" content="MacOS下安装Hugo">
+  <meta property="og:title" content="使用Hugo创建静态站点 | TechAuthor">
+  <meta property="og:description" content="MacOS下创建Hugo站点">
   
   
     
@@ -102,14 +102,14 @@
   
   <meta property="article:published_time" content="2016-04-20T00:00:00&#43;08:00">
   
-  <meta property="article:modified_time" content="2018-01-14T00:00:00&#43;08:00">
+  <meta property="article:modified_time" content="2018-01-16T00:00:00&#43;08:00">
   
 
   
 
   
 
-  <title>Hugo 安装 | TechAuthor</title>
+  <title>使用Hugo创建静态站点 | TechAuthor</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -162,10 +162,10 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Hugo 安装</h1>
+  <h1 itemprop="name">使用Hugo创建静态站点</h1>
 
   
-  <p class="page-subtitle">MacOS下安装Hugo</p>
+  <p class="page-subtitle">MacOS下创建Hugo站点</p>
   
 
   
@@ -189,8 +189,8 @@
         Last updated on
     
     <meta content="2016-04-20 00:00:00 &#43;0800 CST" itemprop="datePublished">
-    <time datetime="2018-01-14 00:00:00 &#43;0800 CST" itemprop="dateModified">
-      Jan 14, 2018
+    <time datetime="2018-01-16 00:00:00 &#43;0800 CST" itemprop="dateModified">
+      Jan 16, 2018
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -200,7 +200,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -244,20 +244,20 @@
 
 <hr />
 
-<h4 id="step-1-安装-hugo"><strong>Step 1: 安装 Hugo</strong></h4>
+<h4 id="step-1-安装homebrew"><strong>Step 1:安装Homebrew</strong></h4>
 
-<ul>
-<li>通过执行命令完成Hugo安装：</li>
-</ul>
-
-<pre><code>$ brew install hugo
-</code></pre>
-
-<p>Homebrew，是MacOs下的软件包管理，需要先从<a href="http://brew.sh" target="_blank">brew.sh</a>下载安装Homebrew。</p>
+<p>Homebrew，是MacOs下的软件包管理，需要先从<a href="http://brew.sh" target="_blank">brew.sh</a>下载安装Homebrew，参考官网的安装方法。</p>
 
 <pre><code>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/
 	install/master/install)&quot;
 
+</code></pre>
+
+<h4 id="step-2-安装-hugo"><strong>Step 2: 安装 Hugo</strong></h4>
+
+<p>通过执行以下命令完成安装：</p>
+
+<pre><code>$ brew install hugo
 </code></pre>
 
 <p>可以通过以下命令，检查Hugo的安装情况，以及安装版本信息。</p>
@@ -265,9 +265,7 @@
 <pre><code>$ hugo version
 </code></pre>
 
-<ul>
-<li>生成站点</li>
-</ul>
+<h4 id="step-3-生成站点"><strong>Step 3: 生成站点</strong></h4>
 
 <p>执行下面命令，在home目录下生成名为mySite的站点。</p>
 
@@ -288,40 +286,65 @@ Just a few more steps and you're ready to go:
 3. Start the built-in live server via &quot;hugo server&quot;.
 </code></pre>
 
-<p>进入mySite站点目录，目录结构如下：</p>
+<p>进入mySite站点目录，关键目录结构如下说明：</p>
 
 <pre><code>|- archetypes ：存放default.md，头文件格式
 
-|- layouts ：主题模板文件
+|- config.toml ： 主配置文件
 
-|- static ：静态资源
+|- content/post ：文章主目录，需要发布的文章放在这里
 
-|- theme.toml ：主题配置文件
+|- static ：静态资源文件
+
+|- themes ：主题文件
 </code></pre>
 
-<ul>
-<li>运行Hugo</li>
-</ul>
+<p>图片路径示例：</p>
 
-<p>在你的站点根目录执行 Hugo 命令进行调试：</p>
+<p>假设测试baseurl为<a href="http://localhost:1313/，图片位置：/static/img/1.png，那么在Markdown中写作`![图片说明](/img/1.png)`,无论在本地还是发布出去，图片的路径都是相对于baseurl而言的。" target="_blank">http://localhost:1313/，图片位置：/static/img/1.png，那么在Markdown中写作`![图片说明](/img/1.png)`,无论在本地还是发布出去，图片的路径都是相对于baseurl而言的。</a></p>
+
+<h4 id="step-4-创建文章"><strong>Step 4: 创建文章</strong></h4>
+
+<pre><code>$ hugo new post/first.md
+</code></pre>
+
+<p>是考验你的MD和文字功底的时候了……</p>
+
+<p>启动Hugo边创作边预览：</p>
 
 <pre><code>$ hugo server -t=academic -D
 </code></pre>
 
-<p>浏览器里打开： <a href="http://localhost:1313" target="_blank">http://localhost:1313</a></p>
+<p>浏览器里打开： <a href="http://localhost:1313" target="_blank">http://localhost:1313</a>，Hugo会检测文件是否更新，刷新页面预览效果。666</p>
 
-<ul>
-<li>部署</li>
-</ul>
+<pre><code>-t 使用的主题名称
+-D 包含草稿文件（MD文件中，draft = true，即标记为草稿状态的文件）否则草稿文件被忽略
+</code></pre>
 
-<p>假设你需要部署在 GitHub Pages 上，首先在GitHub上创建一个Repository，命名为：coderzh.github.io （coderzh替换为你的github用户名）。</p>
+<h4 id="step-5-安装皮肤"><strong>Step 5: 安装皮肤</strong></h4>
+
+<p>Hugo有众多社区支持者贡献了非常多优秀的主题。大家可以到<a href="https://themes.gohugo.io" target="_blank">https://themes.gohugo.io</a>选择安装。</p>
+
+<p>本文安装的主题为：academic(<a href="https://github.com/gcushen/hugo-academic" target="_blank">GitHub地址</a>)</p>
+
+<p>该主题非常强大，关注者与使用者众多，文档非常齐全，安装和使用说明也非常详细完备，推荐给大家供参考选用。</p>
+
+<h4 id="step-6-生成页面部署"><strong>Step 6: 生成页面部署</strong></h4>
+
+<p><a href="https://gohugo.io/hosting-and-deployment/" target="_blank">Hugo支持多种部署方式,点击链接查看支持部署方式</a>。</p>
+
+<p>本文以部署到GitHub为例，其他请参考上述链接地址。</p>
+
+<p>假设你需要部署在 <a href="https://pages.github.com" target="_blank">GitHub Pages</a> 上，首先在GitHub上创建一个Repository，命名为：techauthor.github.io （techauthor替换为你的github用户名）。</p>
+
+<p>User/organization site 和 Project site 不尽相同，区别和Repository创建方法，请查看<a href="https://pages.github.com" target="_blank">GitHub Pages</a>相关说明，此处不再赘述。</p>
 
 <p>在站点根目录执行 Hugo 命令生成最终页面：</p>
 
 <pre><code>$ hugo --theme=academic --baseUrl=&quot;http://techauthor.github.io/&quot;
 </code></pre>
 
-<p>（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 draft=true 再重新生成。）</p>
+<p>（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请将文章头部的 <code>draft=true</code> 改为 <code>draft=false</code> ）</p>
 
 <p>如果一切顺利，所有静态页面都会生成到 public 目录，将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。</p>
 
@@ -333,7 +356,9 @@ $ git commit -m &quot;first commit&quot;
 $ git push -u origin master
 </code></pre>
 
-<p>浏览器里访问：<a href="http://techauthor.github.io/" target="_blank">http://techauthor.github.io/</a></p>
+<p>浏览器里访问：<a href="http://techauthor.github.io/，即可预览你的创作成果。" target="_blank">http://techauthor.github.io/，即可预览你的创作成果。</a></p>
+
+<p>祝贺大功告成。</p>
 
 <hr />
 
@@ -371,14 +396,9 @@ $ git push -u origin master
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="http://techauthor.github.io/post/getting-started/" rel="next">Academic: the website designer for Hugo</a>
+    <a href="http://techauthor.github.io/post/markdown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" rel="next">MarkDown 常用语法</a>
   </div>
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="http://techauthor.github.io/post/markdown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" rel="prev">MarkDown 常用语法</a>
-  </div>
   
 </div>
 

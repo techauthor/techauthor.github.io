@@ -454,111 +454,6 @@ git submodule update --init --recursive
     </item>
     
     <item>
-      <title>Hugo 安装</title>
-      <link>http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
-      
-      <guid>http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/</guid>
-      <description>
-
-&lt;hr /&gt;
-
-&lt;h4 id=&#34;step-1-安装-hugo&#34;&gt;&lt;strong&gt;Step 1: 安装 Hugo&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;通过执行命令完成Hugo安装：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;$ brew install hugo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Homebrew，是MacOs下的软件包管理，需要先从&lt;a href=&#34;http://brew.sh&#34; target=&#34;_blank&#34;&gt;brew.sh&lt;/a&gt;下载安装Homebrew。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ /usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/
-	install/master/install)&amp;quot;
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;可以通过以下命令，检查Hugo的安装情况，以及安装版本信息。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;生成站点&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;执行下面命令，在home目录下生成名为mySite的站点。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo new site ~/mySite
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;下面显示站点创建成功&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Congratulations! Your new Hugo site is created in ~/mySite.
-
-Just a few more steps and you&#39;re ready to go:
-
-1. Download a theme into the same-named folder.
-   Choose a theme from https://themes.gohugo.io/, or
-   create your own with the &amp;quot;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;quot; command.
-2. Perhaps you want to add some content. You can add single files
-   with &amp;quot;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;quot;.
-3. Start the built-in live server via &amp;quot;hugo server&amp;quot;.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;进入mySite站点目录，目录结构如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;|- archetypes ：存放default.md，头文件格式
-
-|- layouts ：主题模板文件
-
-|- static ：静态资源
-
-|- theme.toml ：主题配置文件
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;运行Hugo&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;在你的站点根目录执行 Hugo 命令进行调试：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo server -t=academic -D
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;浏览器里打开： &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;http://localhost:1313&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;部署&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;假设你需要部署在 GitHub Pages 上，首先在GitHub上创建一个Repository，命名为：coderzh.github.io （coderzh替换为你的github用户名）。&lt;/p&gt;
-
-&lt;p&gt;在站点根目录执行 Hugo 命令生成最终页面：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo --theme=academic --baseUrl=&amp;quot;http://techauthor.github.io/&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 draft=true 再重新生成。）&lt;/p&gt;
-
-&lt;p&gt;如果一切顺利，所有静态页面都会生成到 public 目录，将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd public
-$ git init
-$ git remote add origin https://github.com/techauthor/techauthor.github.io.git
-$ git add -A
-$ git commit -m &amp;quot;first commit&amp;quot;
-$ git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;浏览器里访问：&lt;a href=&#34;http://techauthor.github.io/&#34; target=&#34;_blank&#34;&gt;http://techauthor.github.io/&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-</description>
-    </item>
-    
-    <item>
       <title>MarkDown 常用语法</title>
       <link>http://techauthor.github.io/post/markdown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
@@ -788,6 +683,136 @@ $ git push -u origin master
 
 &lt;pre&gt;&lt;code&gt;我将会出现在代码块中。。。。
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用Hugo创建静态站点</title>
+      <link>http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>http://techauthor.github.io/post/hugo-%E5%AE%89%E8%A3%85/</guid>
+      <description>
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;step-1-安装homebrew&#34;&gt;&lt;strong&gt;Step 1:安装Homebrew&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Homebrew，是MacOs下的软件包管理，需要先从&lt;a href=&#34;http://brew.sh&#34; target=&#34;_blank&#34;&gt;brew.sh&lt;/a&gt;下载安装Homebrew，参考官网的安装方法。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ /usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/
+	install/master/install)&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;step-2-安装-hugo&#34;&gt;&lt;strong&gt;Step 2: 安装 Hugo&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;通过执行以下命令完成安装：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew install hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以通过以下命令，检查Hugo的安装情况，以及安装版本信息。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;step-3-生成站点&#34;&gt;&lt;strong&gt;Step 3: 生成站点&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;执行下面命令，在home目录下生成名为mySite的站点。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new site ~/mySite
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;下面显示站点创建成功&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Congratulations! Your new Hugo site is created in ~/mySite.
+
+Just a few more steps and you&#39;re ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/, or
+   create your own with the &amp;quot;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;quot; command.
+2. Perhaps you want to add some content. You can add single files
+   with &amp;quot;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;quot;.
+3. Start the built-in live server via &amp;quot;hugo server&amp;quot;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;进入mySite站点目录，关键目录结构如下说明：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;|- archetypes ：存放default.md，头文件格式
+
+|- config.toml ： 主配置文件
+
+|- content/post ：文章主目录，需要发布的文章放在这里
+
+|- static ：静态资源文件
+
+|- themes ：主题文件
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;图片路径示例：&lt;/p&gt;
+
+&lt;p&gt;假设测试baseurl为&lt;a href=&#34;http://localhost:1313/，图片位置：/static/img/1.png，那么在Markdown中写作`![图片说明](/img/1.png)`,无论在本地还是发布出去，图片的路径都是相对于baseurl而言的。&#34; target=&#34;_blank&#34;&gt;http://localhost:1313/，图片位置：/static/img/1.png，那么在Markdown中写作`![图片说明](/img/1.png)`,无论在本地还是发布出去，图片的路径都是相对于baseurl而言的。&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;step-4-创建文章&#34;&gt;&lt;strong&gt;Step 4: 创建文章&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new post/first.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;是考验你的MD和文字功底的时候了……&lt;/p&gt;
+
+&lt;p&gt;启动Hugo边创作边预览：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo server -t=academic -D
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;浏览器里打开： &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;http://localhost:1313&lt;/a&gt;，Hugo会检测文件是否更新，刷新页面预览效果。666&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-t 使用的主题名称
+-D 包含草稿文件（MD文件中，draft = true，即标记为草稿状态的文件）否则草稿文件被忽略
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;step-5-安装皮肤&#34;&gt;&lt;strong&gt;Step 5: 安装皮肤&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Hugo有众多社区支持者贡献了非常多优秀的主题。大家可以到&lt;a href=&#34;https://themes.gohugo.io&#34; target=&#34;_blank&#34;&gt;https://themes.gohugo.io&lt;/a&gt;选择安装。&lt;/p&gt;
+
+&lt;p&gt;本文安装的主题为：academic(&lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34; target=&#34;_blank&#34;&gt;GitHub地址&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;该主题非常强大，关注者与使用者众多，文档非常齐全，安装和使用说明也非常详细完备，推荐给大家供参考选用。&lt;/p&gt;
+
+&lt;h4 id=&#34;step-6-生成页面部署&#34;&gt;&lt;strong&gt;Step 6: 生成页面部署&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/hosting-and-deployment/&#34; target=&#34;_blank&#34;&gt;Hugo支持多种部署方式,点击链接查看支持部署方式&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;本文以部署到GitHub为例，其他请参考上述链接地址。&lt;/p&gt;
+
+&lt;p&gt;假设你需要部署在 &lt;a href=&#34;https://pages.github.com&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt; 上，首先在GitHub上创建一个Repository，命名为：techauthor.github.io （techauthor替换为你的github用户名）。&lt;/p&gt;
+
+&lt;p&gt;User/organization site 和 Project site 不尽相同，区别和Repository创建方法，请查看&lt;a href=&#34;https://pages.github.com&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt;相关说明，此处不再赘述。&lt;/p&gt;
+
+&lt;p&gt;在站点根目录执行 Hugo 命令生成最终页面：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo --theme=academic --baseUrl=&amp;quot;http://techauthor.github.io/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请将文章头部的 &lt;code&gt;draft=true&lt;/code&gt; 改为 &lt;code&gt;draft=false&lt;/code&gt; ）&lt;/p&gt;
+
+&lt;p&gt;如果一切顺利，所有静态页面都会生成到 public 目录，将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd public
+$ git init
+$ git remote add origin https://github.com/techauthor/techauthor.github.io.git
+$ git add -A
+$ git commit -m &amp;quot;first commit&amp;quot;
+$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;浏览器里访问：&lt;a href=&#34;http://techauthor.github.io/，即可预览你的创作成果。&#34; target=&#34;_blank&#34;&gt;http://techauthor.github.io/，即可预览你的创作成果。&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;祝贺大功告成。&lt;/p&gt;
 
 &lt;hr /&gt;
 </description>
